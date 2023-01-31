@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GameController">
+    <children>
+      <AnchorPane fx:id="operationPane" layoutX="650.0" layoutY="742.0" prefHeight="264.0" prefWidth="396.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="396.0" text="Operation" />
+            <Button fx:id="nextRoundButton" layoutX="14.0" layoutY="67.0" mnemonicParsing="false" text="Next Round" />
+            <Button fx:id="restartGameButton" layoutX="255.0" layoutY="67.0" mnemonicParsing="false" text="Retart Game" />
+            <Button fx:id="execButton" layoutX="14.0" layoutY="132.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="127.0" text="Action" />
+            <AnchorPane fx:id="addPlayerPane" layoutY="7.0" prefHeight="264.0" prefWidth="396.0" style="-fx-background-color: #DCDCDC;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="396.0" text="Add Player" />
+                  <Label layoutX="20.0" layoutY="120.0" prefHeight="18.0" prefWidth="114.0" text="Name:" />
+                  <Label layoutX="20.0" layoutY="61.0" prefHeight="18.0" prefWidth="114.0" text="Track:" />
+                  <Button fx:id="addPlayerButton" layoutX="20.0" layoutY="181.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="162.0" text="Add Player" />
+                  <Button fx:id="startGameButton" layoutX="214.0" layoutY="181.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="162.0" text="Start Game" />
+                  <TextField fx:id="addPlayerNameField" layoutX="134.0" layoutY="114.0" prefWidth="242.0" />
+                  <ComboBox fx:id="addPlayerTrackComboBox" layoutX="134.0" layoutY="55.0" prefHeight="36.0" prefWidth="242.0" />
+                  <AnchorPane fx:id="gameLevelPane" layoutY="7.0" prefHeight="264.0" prefWidth="396.0" style="-fx-background-color: #DCDCDC;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-10.0" prefHeight="46.0" prefWidth="411.0" text="Game Level" />
+                        <Button fx:id="okLevelButton" layoutX="142.0" layoutY="192.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="127.0" text="OK" />
+                        <TextField fx:id="mapWidthField" layoutX="195.0" layoutY="67.0" prefHeight="36.0" prefWidth="195.0" />
+                        <Label layoutX="26.0" layoutY="67.0" prefHeight="36.0" prefWidth="146.0" text="Width:(10-30)" />
+                        <Label layoutX="26.0" layoutY="114.0" prefHeight="36.0" prefWidth="168.0" text="Probability:(0-50)%" />
+                        <TextField fx:id="obstacleProbabilityField" layoutX="195.0" layoutY="114.0" prefHeight="36.0" prefWidth="195.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+        <GridPane fx:id="gameMap" layoutX="14.0" layoutY="14.0" prefHeight="711.0" prefWidth="1892.0" style="-fx-background-color: #DCDCDC;" vgap="3.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+      <AnchorPane fx:id="numberDicePane" layoutX="14.0" layoutY="742.0" prefHeight="264.0" prefWidth="287.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Button fx:id="stepsDiceButton" layoutX="30.0" layoutY="90.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="83.0" />
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="287.0" text="Tetrahedral Dice of Steps" />
+            <Label fx:id="stepsLabel" layoutX="169.0" layoutY="113.0" prefHeight="46.0" prefWidth="75.0" text="1">
+               <font>
+                  <Font size="26.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="directionDicePane" layoutX="331.0" layoutY="742.0" prefHeight="264.0" prefWidth="287.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Button fx:id="directionDiceButton" layoutX="30.0" layoutY="90.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="83.0" />
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="287.0" text="Tetrahedral Dice of Direction" />
+            <Label fx:id="directionLabel" layoutX="124.0" layoutY="113.0" prefHeight="46.0" prefWidth="138.0" text="Forward">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="14.0" layoutY="1024.0" prefHeight="36.0" prefWidth="1892.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Label fx:id="gameLogLabel" alignment="CENTER" prefHeight="74.0" prefWidth="1923.0" />
+         </children></HBox>
+      <VBox fx:id="rankPane" layoutX="1704.0" layoutY="743.0" prefHeight="261.0" prefWidth="202.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="Rank" textFill="#da9191" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" style="-fx-background-color: #FFD700;" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" style="-fx-background-color: #C0C0C0;" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="203.0" text="[None]" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="playerInfoPane" layoutX="1071.0" layoutY="742.0" prefHeight="264.0" prefWidth="603.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="590.0" text="Player Info" />
+            <Label layoutX="14.0" layoutY="45.0" prefHeight="24.0" prefWidth="114.0" text="Blood:" />
+            <Label fx:id="playerBloodLabel" layoutX="128.0" layoutY="45.0" prefHeight="24.0" prefWidth="162.0" text="5" />
+            <Label fx:id="playerStatusLabel" layoutX="128.0" layoutY="75.0" prefHeight="24.0" prefWidth="162.0" text="Normal" />
+            <Label layoutX="14.0" layoutY="75.0" prefHeight="24.0" prefWidth="114.0" text="Status:" />
+            <Label fx:id="playerPositionLabel" layoutX="128.0" layoutY="108.0" prefHeight="24.0" prefWidth="162.0" text="(0, 0)" />
+            <Label layoutX="14.0" layoutY="108.0" prefHeight="24.0" prefWidth="114.0" text="Position:" />
+            <Label fx:id="playerNameLabel" layoutX="421.0" layoutY="43.0" prefHeight="24.0" prefWidth="162.0" text="Player1" />
+            <Label layoutX="307.0" layoutY="43.0" prefHeight="24.0" prefWidth="114.0" text="Name:" />
+            <Label layoutX="307.0" layoutY="75.0" prefHeight="24.0" prefWidth="114.0" text="Rank:" />
+            <Label fx:id="playerRankLabel" layoutX="421.0" layoutY="75.0" prefHeight="24.0" prefWidth="162.0" text="None" />
+            <Label fx:id="playerStepsLabel" layoutX="421.0" layoutY="108.0" prefHeight="24.0" prefWidth="162.0" text="0" />
+            <Label layoutX="307.0" layoutY="108.0" prefHeight="24.0" prefWidth="114.0" text="Steps:" />
+            <GridPane fx:id="playersGrid" layoutX="14.0" layoutY="141.0" prefHeight="117.0" prefWidth="578.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P1[]" />
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P2[]" GridPane.columnIndex="1" />
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P3[]" GridPane.rowIndex="1" />
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P4[]" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P5[]" GridPane.rowIndex="2" />
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P6[]" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P7[]" GridPane.rowIndex="3" />
+                  <Label prefHeight="29.0" prefWidth="312.0" text="P8[]" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
